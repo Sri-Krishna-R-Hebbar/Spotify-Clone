@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Spotify - Web Player</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="home">
+        <div class="sidebar">
+            <div class="top">
+                <div class="house icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16" id="house">
+                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+                    </svg>
+                    <a href="../Home/home.html"><h1 id="house">Home</h1></a>
+                </div>
+                <div class="search icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"  id="searchIcon">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                    <a href="../Search/search.html"><h1 id="search">Search</h1></a>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="lib">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-collection" viewBox="0 0 16 16" id="library">
+                        <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/>
+                    </svg>
+                    <a href="../Library/lib.html"><h1 id="lib">Your Library</h1></a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16" id="plus">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16" id="rightarrow">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg>
+                </div>
+                <div class="playlistText">
+                    <p id="playlistText">Playlists</p>
+                </div>
+                <div class="bar3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"  id="searchIcon">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                    <div class="dropdown">
+                        <button onclick="show_hide()" id="recent">Recents</button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16" id="recents" class="recentsvg">
+                            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                        <div id="recent_content" class="recent_content">
+                            <div class="sort">
+                                <p id="sort">Sort by</p>
+                                <p>Recents</p>
+                                <p>Recently Added</p>
+                                <p>Alphabetical</p>
+                                <p>Creator</p>
+                            </div>
+                            <div class="view">
+                                <p id="view">View As</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16" id="recents" class="recentsvg">
+                                    <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                                </svg>
+                                <p>Compact</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16" class="recentsvg">
+                                    <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                                </svg>
+                                <p>List</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16" class="recentsvg">
+                                    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/>
+                                </svg>
+                                <p>Grid</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlists">
+                    <div class="liked">
+                        <img src="../Home/Images/liked songs.jpeg" alt="Liked songs" height="50px" width="50px" class="playimg">
+                        <div class="titleliked1 liked1">
+                            <a href="../Liked Songs/like.html"><h1 id="heading"  style="color: green; font-size: 20px; font-weight: 700;">Liked Songs</h1></a>
+                            <p id="tally" style="margin-top: 0.3%;">Playlist . 11 Songs</p>
+                        </div>
+                    </div>
+                    <div class="play1">
+                        <img src="../Home/Images/1.png" alt="Liked songs" height="50px" width="50px" class="playimg">
+                        <div class="titleliked2">
+                            <h1 id="heading head2">Deep House 23</h1>
+                            <p id="tally" style="margin-top: 0.3%;">Playlist . John</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="bared1">
+                <div class="arrowleft">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+                    </svg>
+                </div>
+                <div class="arrowright">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                    </svg>
+                </div>
+                <a href="#" class="explore"><p>Explore Premium</p></a>
+                <div class="install">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+                    </svg>
+                </div>
+                <a href="#" id="install"><p>Install App</p></a>
+                <div class="bell">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+                    </svg>
+                </div>
+                <div class="user">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
+                      </svg>
+                </div>
+            </div>
+            <h1 id="greeting">Hello , John</h1>
+            <div class="bared2">
+                <div class="like2">
+                    <img src="../Home/Images/liked songs.jpeg" alt="liked" height="50px" width="50px">
+                    <p class="liketext">Liked Songs</p>
+                </div>
+                <div class="relax">
+                    <img src="../Home/Images/2.png" alt="liked" height="50px" width="50px">
+                    <p class="relaxtext">Relaxing</p>
+                </div>
+                <div class="inspire">
+                    <img src="../Home/Images/3.png" alt="liked" height="50px" width="50px">
+                    <p class="inspiretext">Inspirational Speech</p>
+                </div>
+                <div class="ted">
+                    <img src="../Home/Images/4.png" alt="liked" height="50px" width="50px">
+                    <p class="tedtext">Ted Talks</p>
+                </div>
+                <div class="chispa">
+                    <img src="../Home/Images/5.png" alt="liked" height="50px" width="50px">
+                    <p class="chispatext">Chispa Motivation</p>
+                </div>
+                <div class="week">
+                    <img src="../Home/Images/6.png" alt="liked" height="50px" width="50px">
+                    <p class="weektext">Weekly Motivation</p>
+                </div>
+            </div>
+            <div class="headings">
+                <h1 id="headings">Made For John</h1>
+                <p>Show All</p>
+            </div>
+            <div class="bars">
+                <div class="mix1">
+                    <a href="#"><img src="../Home/Images/7.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix1">Daily Mix 1</p>
+                    <p id="des1">Kishore Kumar , AR Rahman , Pritam and more</p>
+                </div>
+                <div class="mix2">
+                    <a href="#"><img src="../Home/Images/8.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix2">Daily Mix 2</p>
+                    <p id="des2"> Pritam , Sona Mohapatra and more </p>
+                </div>
+                <div class="mix3">
+                    <a href="#"><img src="../Home/Images/9.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix3">Daily Mix 3</p>
+                    <p id="des3">Hesham Abdul Wahab , Jakes Bijoy , Prithviraj Sukumaran and more </p>
+                </div>
+                <div class="mix4">
+                    <a href="#"><img src="../Home/Images/10.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix3">Daily Mix 4</p>
+                    <p id="des3">Ritviz, Akanksha Bhandari, Sachin-Jigar and more </p>
+                </div>
+            </div>
+            <div class="headings">
+                <h1 id="headings">Your Top Mixes</h1>
+                <p>Show All</p>
+            </div>
+            <div class="bars">
+                <div class="mix1">
+                    <a href="#"><img src="../Home/Images/11.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix1">Lata Mangeshkar Mix</p>
+                    <p id="des1">Mukesh , Mahendra Kapoor and Illiayaraaja</p>
+                </div>
+                <div class="mix2">
+                    <a href="#"><img src="../Home/Images/12.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix2">Hindi Mix</p>
+                    <p id="des2">Mukesh , AR Rahman , Pritam and many more </p>
+                </div>
+                <div class="mix3">
+                    <a href="#"><img src="../Home/Images/13.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix3">Romantic Mix</p>
+                    <p id="des3">Jeet Gannguli , Hesham Abdul Wahab and many more </p>
+                </div>
+            </div>
+            <div class="headings">
+                <h1 id="headings">Episodes for you</h1>
+                <p>Show All</p>
+            </div>
+            <div class="bars">
+                <div class="mix1">
+                    <a href="#"><img src="../Home/Images/14.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix1">On Purpose</p>
+                    <p id="des1">Nov 2022. 69 min</p>
+                </div>
+                <div class="mix2">
+                    <a href="#"><img src="../Home/Images/15.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix2">The Ranveer Show</p>
+                    <p id="des2">Dec 5. 107 min </p>
+                </div>
+                <div class="mix3">
+                    <a href="#"><img src="../Home/Images/16.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix3" class="big">Inner Engineering Podcast</p>
+                    <p id="des3">June 2021. 45 min</p>
+                </div>
+                <div class="mix4">
+                    <a href="#"><img src="../Home/Images/17.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix4" class="big">How to Control Your Thoughts?</p>
+                    <p id="des4">July 2022. 22 min</p>
+                </div>
+                <div class="mix5">
+                    <a href="#"><img src="../Home/Images/18.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix5">మమతల తల్లి</p>
+                    <p id="des5">Aug 2. 21 min</p>
+                </div>
+            </div>
+            <div class="headings">
+                <h1 id="headings">Your Best Singers</h1>
+                <p>Show All</p>
+            </div>
+            <div class="bars">
+                <div class="mix1">
+                    <a href="#"><img src="../Home/Images/19.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix1" class="big">Hesham Abdul Wahab</p>
+                    <p id="des1">Melodic . Contemporary . Soulful</p>
+                </div>
+                <div class="mix2">
+                    <a href="#"><img src="../Home/Images/20.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix2">Mohammed Rafi</p>
+                    <p id="des2">Talented . Iconic . Versatile </p>
+                </div>
+                <div class="mix3">
+                    <a href="#"><img src="../Home/Images/21.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix3">Devi Sri Prasad</p>
+                    <p id="des3">Energetic . Dynamic . Innovative</p>
+                </div>
+                <div class="mix4">
+                    <a href="#"><img src="../Home/Images/22.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix4">S Janaki</p>
+                    <p id="des4">Soothing . Mellow . Romantic</p>
+                </div>
+                <div class="mix5">
+                    <a href="#"><img src="../Home/Images/23.png" alt="liked songs" height="138px" width="95%"></a>
+                    <p id="mix5">Armaan Malik</p>
+                    <p id="des5">Youthful . Contemporary . Romantic</p>
+                </div>
+            </div>
+            <footer class="foot">
+                <div class="Company">
+                    <p id="heads">Company</p>
+                    <a href="#"><p>About</p></a>
+                    <a href="#"><p>Jobs</p></a>
+                    <a href="#"><p>For The Record</p></a>
+                </div>
+                <div class="Community">
+                    <p id="heads">Communities</p>
+                    <a href="#"><p>For Artists</p></a>
+                    <a href="#"><p>Developers</p></a>
+                    <a href="#"><p>Advertising</p></a>
+                    <a href="#"><p>Investors</p></a>
+                </div>
+                <div class="links">
+                    <p id="heads">Useful Links</p>
+                    <a href="#"><p>Support</p></a>
+                    <a href="#"><p>Free Mobile App</p></a>
+                </div>
+                <div class="social">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16" class="insta">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16" class="tweet">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16" class="face">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                </div>
+            </footer>
+            <hr>
+            <div class="bot">
+                <a href="#"><p>Legal</p></a>
+                <a href="#"><p>Privacy Center</p></a>
+                <a href="#"><p>Privacy Policy</p></a>
+                <a href="#"><p>Cookies</p></a>
+                <a href="#"><p>Ads</p></a>
+                <a href="#"><p>Accessibility</p></a>
+                <p>© 2023 Spotiify</p>
+            </div>
+        </div>
+        <div class="play">
+            <div class="audioc">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16" class="shuffle">
+                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"/>
+                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-skip-start" viewBox="0 0 16 16" class="before">
+                    <path d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.52-.302 1.233.043 1.233.696v7.384c0 .653-.713.998-1.233.696L5 8.752V12a.5.5 0 0 1-1 0zm7.5.633L5.696 8l5.804 3.367z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16" id="play">
+                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-skip-end" viewBox="0 0 16 16" class="after">
+                    <path d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.713 3.31 4 3.655 4 4.308v7.384c0 .653.713.998 1.233.696L11.5 8.752V12a.5.5 0 0 0 1 0zM5 4.633 10.804 8 5 11.367z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-repeat" viewBox="0 0 16 16" class="repeat">
+                    <path d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z"/>
+                </svg>
+            </div>
+            <div class="audiod">
+                <input type="range" id="line" min="0" value="0" max="100" >
+            </div>
+        </div>
+    </div>
+    <script src="./home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
